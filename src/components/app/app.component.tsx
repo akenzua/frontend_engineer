@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import { ApolloProvider } from '@apollo/client';
-import client from '../../shared/apollo-client';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../../pages/home.page';
 import { createGlobalStyle } from 'styled-components';
@@ -18,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
 const App: React.FC = () => {
     return (
-        <ApolloProvider client={client}>
+        <Fragment>
             <GlobalStyle />
             <Router>
                 <Switch>
@@ -27,7 +26,7 @@ const App: React.FC = () => {
                     </Route>
                 </Switch>
             </Router>
-        </ApolloProvider>
+        </Fragment>
     );
 }
 
