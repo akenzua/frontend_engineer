@@ -1,19 +1,11 @@
 import React from 'react';
 import Repos from '../components/repo/repos.component';
-import { Repo } from '../shared/interfaces/repo.interface';
+import { useGetRepos } from '../hooks/repos/useGetRepos'
 
 const Home: React.FC = () => {
-
-const repo = [{
-    node: {
-        name: "AJ",
-        stargazerCount: 122323,
-        forkCount: 34242
-    }
-}]
-   
+const repos = useGetRepos();   
     return (
-        <Repos repos={repo || []} />   
+        <Repos repos={repos || []} />   
     );
 }
 
