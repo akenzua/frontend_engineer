@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { ApolloProvider } from '@apollo/client';
-import client from '../shared/apollo-client';
+import client from '../../shared/apollo-client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../pages/home.page';
+import Home from '../../pages/home.page';
 
 const App: React.FC = () => {
     return (
