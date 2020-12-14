@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Repo } from '../../shared/interfaces/repo.interface';
+import { TableBody, TableContainer,  TableHead, TableHeader, TableRow } from '../../shared/styles/layout';
 import RepoItem from './repo-item/repo-item';
 
 interface RepoProps {
@@ -10,22 +11,22 @@ const Repos: React.FC<RepoProps> = ({repos}:RepoProps) => {
     return(
         <Fragment>
             <h1>List of React repositoires</h1>
-            <div>
-                    <div>
-                        <div>
-                            <div>Names</div>
-                            <div>Stars</div>
-                            <div>Forks</div>
-                        </div>
-                    </div>
+            <TableContainer>
+                    <TableHead>
+                        <TableRow>
+                            <TableHeader>Names</TableHeader>
+                            <TableHeader>Stars</TableHeader>
+                            <TableHeader>Forks</TableHeader>
+                        </TableRow>
+                    </TableHead>
                     
                     {repos.map((repo, i) => (
-                        <div  key={i}>
+                        <TableBody  key={i}>
                             <RepoItem repo={repo} />
-                        </div>
+                        </TableBody>
                     ))}
                     
-             </div>
+             </TableContainer>
         </Fragment>
     );
 }

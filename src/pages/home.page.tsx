@@ -10,4 +10,3 @@ const repos = useGetRepos();
 }
 
 export default Home;
-
