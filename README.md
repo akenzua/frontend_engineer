@@ -7,13 +7,14 @@ in a table showing names, starts, and forks. It also use docker container.
 
 git clone https://github.com/akenzua/frontend_engineer.git
 
-docker-compose up
+generate token on githhub
 
+Add the token to a .env file at the root of the project
+
+    docker-compose up
 
 Alternatively
 
-yarn install
+    yarn install
 
-yarn start
-
-
+    yarn start
